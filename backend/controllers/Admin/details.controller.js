@@ -29,7 +29,7 @@ const addDetails = async (req, res) => {
                 message: "Admin With This EmployeeId Already Exists",
             });
         }
-        user = await adminDetails.create({ ...req.body, profile: req.file.filename });
+        user = await adminDetails.create({...req.body });
         const data = {
             success: true,
             message: "Admin Details Added!",

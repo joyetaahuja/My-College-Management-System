@@ -89,7 +89,7 @@ const Branch = () => {
           <button
             className={`${
               selected === "add" && "border-b-2 "
-            }border-blue-500 px-4 py-2 text-black rounded-sm mr-6`}
+            }border-green-500 px-4 py-2 text-black rounded-sm mr-6`}
             onClick={() => setSelected("add")}
           >
             Add Branch
@@ -97,7 +97,7 @@ const Branch = () => {
           <button
             className={`${
               selected === "view" && "border-b-2 "
-            }border-blue-500 px-4 py-2 text-black rounded-sm`}
+            }border-green-500 px-4 py-2 text-black rounded-sm`}
             onClick={() => setSelected("view")}
           >
             View Branch
@@ -115,11 +115,11 @@ const Branch = () => {
               id="name"
               value={data.name}
               onChange={(e) => setData({ ...data, name: e.target.value })}
-              className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-green-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <button
-            className="mt-6 bg-blue-500 px-6 py-3 text-white"
+            className="mt-6 bg-green-500 px-6 py-3 text-white"
             onClick={addBranchHandler}
           >
             Add Branch
@@ -134,7 +134,7 @@ const Branch = () => {
                 return (
                   <li
                     key={index}
-                    className="bg-blue-100 py-3 px-6 mb-3 flex justify-between items-center w-[70%]"
+                    className="bg-green-100 py-3 px-6 mb-3 flex justify-between items-center w-[70%]"
                   >
                     <div>{item.name}</div>
                     <button

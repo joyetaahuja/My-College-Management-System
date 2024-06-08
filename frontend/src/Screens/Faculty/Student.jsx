@@ -4,6 +4,7 @@ import Heading from "../../components/Heading";
 import axios from "axios";
 import { baseApiURL } from "../../baseUrl";
 import { FiSearch } from "react-icons/fi";
+
 const Student = () => {
   const [search, setSearch] = useState();
   const [data, setData] = useState({
@@ -86,22 +87,22 @@ const Student = () => {
       </div>
       <div className="my-6 mx-auto w-full">
         <form
-          className="flex justify-center items-center border-2 border-blue-500 rounded w-[40%] mx-auto"
+          className="flex justify-center items-center border-2 border-green-500 rounded w-[40%] mx-auto"
           onSubmit={searchStudentHandler}
         >
           <input
             type="text"
-            className="px-6 py-3 w-full outline-none"
+            className="px-6 py-3 w-full outline-none bg-green-50 rounded"
             placeholder="Enrollment No."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button className="px-4 text-2xl hover:text-blue-500" type="submit">
+          <button className="px-4 text-2xl hover:text-green-500" type="submit">
             <FiSearch />
           </button>
         </form>
         {id && (
-          <div className="mx-auto w-full bg-blue-50 mt-10 flex justify-between items-center p-10 rounded-md shadow-md">
+          <div className="mx-auto w-full bg-green-50 mt-10 flex justify-between items-center p-10 rounded-md shadow-md">
             <div>
               <p className="text-2xl font-semibold">
                 {data.firstName} {data.middleName} {data.lastName}

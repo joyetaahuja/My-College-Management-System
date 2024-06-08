@@ -5,6 +5,7 @@ import { baseApiURL } from "../../baseUrl";
 import { toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { setUserData } from "../../redux/actions";
+
 const Profile = () => {
   const [showPass, setShowPass] = useState(false);
   const router = useLocation();
@@ -14,6 +15,7 @@ const Profile = () => {
     new: "",
     current: "",
   });
+
   useEffect(() => {
     const headers = {
       "Content-Type": "application/json",
@@ -122,7 +124,7 @@ const Profile = () => {
             </div>
             <button
               className={`${
-                showPass ? "bg-red-100 text-red-600" : "bg-blue-600 text-white"
+                showPass ? "bg-blue-100 text-blue-600" : "bg-green-600 text-white"
               }  px-3 py-1 rounded mt-4`}
               onClick={() => setShowPass(!showPass)}
             >
@@ -130,7 +132,7 @@ const Profile = () => {
             </button>
             {showPass && (
               <form
-                className="mt-4 border-t-2 border-blue-500 flex flex-col justify-center items-start"
+                className="mt-4 border-t-2 border-green-500 flex flex-col justify-center items-start"
                 onSubmit={checkPasswordHandler}
               >
                 <input
@@ -140,7 +142,7 @@ const Profile = () => {
                     setPassword({ ...password, current: e.target.value })
                   }
                   placeholder="Current Password"
-                  className="px-3 py-1 border-2 border-blue-500 outline-none rounded mt-4"
+                  className="px-3 py-1 border-2 border-green-500 outline-none rounded mt-4"
                 />
                 <input
                   type="password"
@@ -149,10 +151,10 @@ const Profile = () => {
                     setPassword({ ...password, new: e.target.value })
                   }
                   placeholder="New Password"
-                  className="px-3 py-1 border-2 border-blue-500 outline-none rounded mt-4"
+                  className="px-3 py-1 border-2 border-green-500 outline-none rounded mt-4"
                 />
                 <button
-                  className="mt-4 hover:border-b-2 hover:border-blue-500"
+                  className="mt-4 hover:border-b-2 hover:border-green-500"
                   onClick={checkPasswordHandler}
                   type="submit"
                 >

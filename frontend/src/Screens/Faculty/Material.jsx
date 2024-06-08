@@ -7,6 +7,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
 import { baseApiURL } from "../../baseUrl";
+
 const Material = () => {
   const { fullname } = useSelector((state) => state.userData);
   const [subject, setSubject] = useState();
@@ -69,6 +70,7 @@ const Material = () => {
         toast.error(error.response.data.message);
       });
   };
+
   return (
     <div className="w-full mx-auto mt-10 flex justify-center items-start flex-col mb-10">
       <div className="flex justify-between items-center w-full">
@@ -81,7 +83,7 @@ const Material = () => {
             <input
               type="text"
               id="title"
-              className="bg-blue-50 py-2 px-4 w-full mt-1"
+              className="bg-green-50 py-2 px-4 w-full mt-1"
               value={selected.title}
               onChange={(e) =>
                 setSelected({ ...selected, title: e.target.value })
@@ -97,10 +99,10 @@ const Material = () => {
               onChange={(e) =>
                 setSelected({ ...selected, subject: e.target.value })
               }
-              className="px-2 bg-blue-50 py-3 rounded-sm text-base accent-blue-700 mt-1 w-full"
+              className="px-2 bg-green-50 py-3 rounded-sm text-base accent-green-700 mt-1 w-full"
             >
               <option defaultValue value="select">
-                -- Select Subject --
+                Select Subject
               </option>
               {subject &&
                 subject.map((item) => {
@@ -115,7 +117,7 @@ const Material = () => {
           {!selected.link && (
             <label
               htmlFor="upload"
-              className="px-2 bg-blue-50 py-3 rounded-sm text-base w-[80%] mt-4 flex justify-center items-center cursor-pointer"
+              className="px-2 bg-green-50 py-3 rounded-sm text-base w-[80%] mt-4 flex justify-center items-center cursor-pointer"
             >
               Upload Material
               <span className="ml-2">
@@ -125,7 +127,7 @@ const Material = () => {
           )}
           {selected.link && (
             <p
-              className="px-2 border-2 border-blue-500 py-2 rounded text-base w-[80%] mt-4 flex justify-center items-center cursor-pointer"
+              className="px-2 border-2 border-green-500 py-2 rounded text-base w-[80%] mt-4 flex justify-center items-center cursor-pointer"
               onClick={() => setSelected({ ...selected, link: "" })}
             >
               Remove Selected Material
@@ -142,7 +144,7 @@ const Material = () => {
             onChange={(e) => setFile(e.target.files[0])}
           />
           <button
-            className="bg-blue-500 text-white mt-8 px-4 py-2 rounded-sm"
+            className="bg-green-500 text-white mt-8 px-4 py-2 rounded-sm"
             onClick={addMaterialHandler}
           >
             Add Material

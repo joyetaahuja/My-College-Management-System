@@ -40,7 +40,7 @@ const Marks = () => {
       <div className="mt-14 w-full flex gap-20">
         {internal && (
           <div className="w-1/2 shadow-md p-4">
-            <p className="border-b-2 border-red-500 text-2xl font-semibold pb-2">
+            <p className="border-b-2 border-green-500 text-2xl font-semibold pb-2">
               Internal Marks (Out of 40)
             </p>
             <div className="mt-5">
@@ -60,7 +60,7 @@ const Marks = () => {
         )}
         {external && (
           <div className="w-1/2 shadow-md p-4">
-            <p className="border-b-2 border-red-500 text-2xl font-semibold pb-2">
+            <p className="border-b-2 border-green-500 text-2xl font-semibold pb-2">
               External Marks (Out of 60)
             </p>
             <div className="mt-5">

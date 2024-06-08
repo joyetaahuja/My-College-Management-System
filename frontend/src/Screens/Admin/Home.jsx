@@ -90,8 +90,8 @@ const Home = () => {
               <li
                 className={`text-center rounded-sm px-4 py-2 w-1/5 cursor-pointer ease-linear duration-300 hover:ease-linear hover:duration-300 hover:transition-all transition-all ${
                   selectedMenu === "Profile"
-                    ? "border-b-2 pb-2 border-blue-500 bg-blue-100 rounded-sm"
-                    : "bg-blue-500 text-white hover:bg-blue-600 border-b-2 border-blue-500"
+                    ? "border-b-2 pb-2 border-green-500 bg-green-100 rounded-sm"
+                    : "bg-blue-500 text-white hover:bg-green-600 border-b-2 border-green-500"
                 }`}
                 onClick={() => setSelectedMenu("Profile")}
               >
@@ -100,8 +100,8 @@ const Home = () => {
               <li
                 className={`text-center rounded-sm px-4 py-2 w-1/5 cursor-pointer ease-linear duration-300 hover:ease-linear hover:duration-300 hover:transition-all transition-all ${
                   selectedMenu === "Student"
-                    ? "border-b-2 pb-2 border-blue-500 bg-blue-100 rounded-sm"
-                    : "bg-blue-500 text-white hover:bg-blue-600 border-b-2 border-blue-500"
+                    ? "border-b-2 pb-2 border-green-500 bg-green-100 rounded-sm"
+                    : "bg-green-500 text-white hover:bg-green-600 border-b-2 border-green-500"
                 }`}
                 onClick={() => setSelectedMenu("Student")}
               >
@@ -110,8 +110,8 @@ const Home = () => {
               <li
                 className={`text-center rounded-sm px-4 py-2 w-1/5 cursor-pointer ease-linear duration-300 hover:ease-linear hover:duration-300 hover:transition-all transition-all ${
                   selectedMenu === "Faculty"
-                    ? "border-b-2 pb-2 border-blue-500 bg-blue-100 rounded-sm"
-                    : "bg-blue-500 text-white hover:bg-blue-600 border-b-2 border-blue-500"
+                    ? "border-b-2 pb-2 border-green-500 bg-green-100 rounded-sm"
+                    : "bg-blue-500 text-white hover:bg-green-600 border-b-2 border-green-500"
                 }`}
                 onClick={() => setSelectedMenu("Faculty")}
               >
@@ -120,8 +120,8 @@ const Home = () => {
               <li
                 className={`text-center rounded-sm px-4 py-2 w-1/5 cursor-pointer ease-linear duration-300 hover:ease-linear hover:duration-300 hover:transition-all transition-all ${
                   selectedMenu === "Branch"
-                    ? "border-b-2 pb-2 border-blue-500 bg-blue-100 rounded-sm"
-                    : "bg-blue-500 text-white hover:bg-blue-600 border-b-2 border-blue-500"
+                    ? "border-b-2 pb-2 border-green-500 bg-green-100 rounded-sm"
+                    : "bg-green-500 text-white hover:bg-green-600 border-b-2 border-green-500"
                 }`}
                 onClick={() => setSelectedMenu("Branch")}
               >
@@ -130,8 +130,8 @@ const Home = () => {
               <li
                 className={`text-center rounded-sm px-4 py-2 w-1/5 cursor-pointer ease-linear duration-300 hover:ease-linear hover:duration-300 hover:transition-all transition-all ${
                   selectedMenu === "Notice"
-                    ? "border-b-2 pb-2 border-blue-500 bg-blue-100 rounded-sm"
-                    : "bg-blue-500 text-white hover:bg-blue-600 border-b-2 border-blue-500"
+                    ? "border-b-2 pb-2 border-green-500 bg-green-100 rounded-sm"
+                    : "bg-green-500 text-white hover:bg-green-600 border-b-2 border-green-500"
                 }`}
                 onClick={() => setSelectedMenu("Notice")}
               >
@@ -140,8 +140,8 @@ const Home = () => {
               <li
                 className={`text-center rounded-sm px-4 py-2 w-1/5 cursor-pointer ease-linear duration-300 hover:ease-linear hover:duration-300 hover:transition-all transition-all ${
                   selectedMenu === "Subjects"
-                    ? "border-b-2 pb-2 border-blue-500 bg-blue-100 rounded-sm"
-                    : "bg-blue-500 text-white hover:bg-blue-600 border-b-2 border-blue-500"
+                    ? "border-b-2 pb-2 border-green-500 bg-green-100 rounded-sm"
+                    : "bg-green-500 text-white hover:bg-green-600 border-b-2 border-green-500"
                 }`}
                 onClick={() => setSelectedMenu("Subjects")}
               >
@@ -150,8 +150,8 @@ const Home = () => {
               <li
                 className={`text-center rounded-sm px-4 py-2 w-1/5 cursor-pointer ease-linear duration-300 hover:ease-linear hover:duration-300 hover:transition-all transition-all ${
                   selectedMenu === "Admin"
-                    ? "border-b-2 pb-2 border-blue-500 bg-blue-100 rounded-sm"
-                    : "bg-blue-500 text-white hover:bg-blue-600 border-b-2 border-blue-500"
+                    ? "border-b-2 pb-2 border-green-500 bg-green-100 rounded-sm"
+                    : "bg-green-500 text-white hover:bg-green-600 border-b-2 border-green-500"
                 }`}
                 onClick={() => setSelectedMenu("Admin")}
               >

@@ -31,7 +31,7 @@ const adminDetails = new mongoose.Schema({
   },
   profile: {
     type: String,
-    required: true,
+    required: false,
   }
 }, { timestamps: true });
 

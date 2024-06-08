@@ -10,6 +10,7 @@ import { MdDeleteOutline, MdEditNote } from "react-icons/md";
 import { BiArrowBack } from "react-icons/bi";
 import toast from "react-hot-toast";
 import { baseApiURL } from "../baseUrl";
+
 const Notice = () => {
   const router = useLocation();
   const [notice, setNotice] = useState("");
@@ -181,26 +182,26 @@ const Notice = () => {
   return (
     <div className="w-full mx-auto flex justify-center items-start flex-col my-10">
       <div className="relative flex justify-between items-center w-full">
-        <Heading title="Notices" />
+        <Heading title="Notice Section" />
         {(router.pathname === "/faculty" || router.pathname === "/admin") &&
           (open ? (
             <button
-              className="absolute right-2 flex justify-center items-center border-2 border-red-500 px-3 py-2 rounded text-red-500"
+              className="absolute right-2 flex justify-center items-center border-2 border-blue-500 px-3 py-2 rounded text-blue-500"
               onClick={openHandler}
             >
               <span className="mr-2">
-                <BiArrowBack className="text-red-500" />
+                <BiArrowBack className="text-blue-500" />
               </span>
               Close
             </button>
           ) : (
             <button
-              className="absolute right-2 flex justify-center items-center border-2 border-red-500 px-3 py-2 rounded text-red-500"
+              className="absolute right-2 flex justify-center items-center border-2 border-blue-500 px-3 py-2 rounded text-blue-500"
               onClick={openHandler}
             >
-              Add Notice
+              Upload Notice
               <span className="ml-2">
-                <IoAddOutline className="text-red-500 text-xl" />
+                <IoAddOutline className="text-blue-500 text-xl" />
               </span>
             </button>
           ))}
@@ -212,37 +213,36 @@ const Notice = () => {
               return (
                 <div
                   key={item._id}
-                  className="border-blue-500 border-2 w-full rounded-md shadow-sm py-4 px-6 mb-4 relative"
+                  className="border-green-500 border-2 w-full rounded-md shadow-sm py-4 px-6 mb-4 relative"
                 >
                   {(router.pathname === "/faculty" ||
                     router.pathname === "/admin") && (
-                    <div className="absolute flex justify-center items-center right-4 bottom-3">
-                      <span className="text-sm bg-blue-500 px-4 py-1 text-white rounded-full">
-                        {item.type}
-                      </span>
-                      <span
-                        className="text-2xl group-hover:text-blue-500 ml-2 cursor-pointer hover:text-red-500"
-                        onClick={() => deleteNoticehandler(item._id)}
-                      >
-                        <MdDeleteOutline />
-                      </span>
-                      <span
-                        className="text-2xl group-hover:text-blue-500 ml-2 cursor-pointer hover:text-blue-500"
-                        onClick={() => setOpenEditSectionHandler(index)}
-                      >
-                        <MdEditNote />
-                      </span>
-                    </div>
-                  )}
+                      <div className="absolute flex justify-center items-center right-4 bottom-3">
+                        <span className="text-sm bg-green-500 px-4 py-1 text-white rounded-full">
+                          {item.type}
+                        </span>
+                        <span
+                          className="text-2xl group-hover:text-green-500 ml-2 cursor-pointer hover:text-blue-500"
+                          onClick={() => deleteNoticehandler(item._id)}
+                        >
+                          <MdDeleteOutline />
+                        </span>
+                        <span
+                          className="text-2xl group-hover:text-green-500 ml-2 cursor-pointer hover:text-green-500"
+                          onClick={() => setOpenEditSectionHandler(index)}
+                        >
+                          <MdEditNote />
+                        </span>
+                      </div>
+                    )}
                   <p
-                    className={`text-xl font-medium flex justify-start items-center ${
-                      item.link && "cursor-pointer"
-                    } group`}
+                    className={`text-xl font-medium flex justify-start items-center ${item.link && "cursor-pointer"
+                      } group`}
                     onClick={() => item.link && window.open(item.link)}
                   >
                     {item.title}
                     {item.link && (
-                      <span className="text-2xl group-hover:text-blue-500 ml-1">
+                      <span className="text-2xl group-hover:text-green-500 ml-1">
                         <IoMdLink />
                       </span>
                     )}
@@ -270,22 +270,22 @@ const Notice = () => {
       {open && (
         <form className="mt-8 w-full">
           <div className="w-[40%] mt-2">
-            <label htmlFor="title">Notice Title</label>
+            <label htmlFor="title">Title Of Notice</label>
             <input
               type="text"
               id="title"
-              className="bg-blue-50 py-2 px-4 w-full mt-1"
+              className="bg-green-50 py-2 px-4 w-full mt-1"
               value={data.title}
               onChange={(e) => setData({ ...data, title: e.target.value })}
             />
           </div>
           <div className="w-[40%] mt-4">
-            <label htmlFor="title">Notice Description</label>
+            <label htmlFor="title">Description of Notice</label>
             <textarea
               id="title"
               cols="30"
               rows="4"
-              className="bg-blue-50 py-2 px-4 w-full mt-1 resize-none"
+              className="bg-green-50 py-2 px-4 w-full mt-1 resize-none"
               value={data.description}
               onChange={(e) =>
                 setData({ ...data, description: e.target.value })
@@ -298,7 +298,7 @@ const Notice = () => {
               type="text"
               id="link"
               value={data.link}
-              className="bg-blue-50 py-2 px-4 w-full mt-1"
+              className="bg-green-50 py-2 px-4 w-full mt-1"
               onChange={(e) => setData({ ...data, link: e.target.value })}
             />
           </div>
@@ -306,7 +306,7 @@ const Notice = () => {
             <label htmlFor="type">Type Of Notice</label>
             <select
               id="type"
-              className="px-2 bg-blue-50 py-3 rounded-sm text-base w-[80%] accent-blue-700 mt-4"
+              className="px-2 bg-green-50 py-3 rounded-sm text-base w-[80%] accent-green-700 mt-4"
               value={data.type}
               onChange={(e) => setData({ ...data, type: e.target.value })}
             >
@@ -318,7 +318,7 @@ const Notice = () => {
           {edit && (
             <button
               onClick={updateNoticehandler}
-              className="bg-blue-500 text-white mt-6 px-6 rounded text-lg py-2 hover:bg-blue-600"
+              className="bg-green-500 text-white mt-6 px-6 rounded text-lg py-2 hover:bg-green-600"
             >
               Update Notice
             </button>
@@ -326,7 +326,7 @@ const Notice = () => {
           {!edit && (
             <button
               onClick={addNoticehandler}
-              className="bg-blue-500 text-white mt-6 px-6 rounded text-lg py-2 hover:bg-blue-600"
+              className="bg-green-500 text-white mt-6 px-6 rounded text-lg py-2 hover:bg-green-600"
             >
               Add Notice
             </button>

@@ -15,6 +15,7 @@ const Marks = () => {
     subject: "",
     examType: "",
   });
+
   const loadStudentDetails = () => {
     const headers = {
       "Content-Type": "application/json",
@@ -22,7 +23,7 @@ const Marks = () => {
     axios
       .post(
         `${baseApiURL()}/student/details/getDetails`,
-        { branch: selected.branch, semester: selected.semester },
+        { batch: selected.branch, semester: selected.semester },
         { headers }
       )
       .then((response) => {
@@ -130,11 +131,11 @@ const Marks = () => {
         <Heading title={`Upload Marks`} />
         {studentData && (
           <button
-            className="absolute right-2 flex justify-center items-center border-2 border-red-500 px-3 py-2 rounded text-red-500"
+            className="absolute right-2 flex justify-center items-center border-2 border-blue-500 px-3 py-2 rounded text-blue-500"
             onClick={resetValueHandler}
           >
             <span className="mr-2">
-              <BiArrowBack className="text-red-500" />
+              <BiArrowBack className="text-blue-500" />
             </span>
             Close
           </button>
@@ -149,13 +150,13 @@ const Marks = () => {
               </label>
               <select
                 id="branch"
-                className="px-2 bg-blue-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
+                className="px-2 bg-green-50 py-3 rounded-sm text-base w-full accent-green-700 mt-1"
                 value={selected.branch}
                 onChange={(e) =>
                   setSelected({ ...selected, branch: e.target.value })
                 }
               >
-                <option defaultValue>-- Select --</option>
+                <option defaultValue>Select</option>
                 {branch &&
                   branch.map((branch) => {
                     return (
@@ -172,13 +173,13 @@ const Marks = () => {
               </label>
               <select
                 id="semester"
-                className="px-2 bg-blue-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
+                className="px-2 bg-green-50 py-3 rounded-sm text-base w-full accent-green-700 mt-1"
                 value={selected.semester}
                 onChange={(e) =>
                   setSelected({ ...selected, semester: e.target.value })
                 }
               >
-                <option defaultValue>-- Select --</option>
+                <option defaultValue>Select</option>
                 <option value="1">1st Semester</option>
                 <option value="2">2nd Semester</option>
                 <option value="3">3rd Semester</option>
@@ -195,13 +196,13 @@ const Marks = () => {
               </label>
               <select
                 id="subject"
-                className="px-2 bg-blue-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
+                className="px-2 bg-green-50 py-3 rounded-sm text-base w-full accent-green-700 mt-1"
                 value={selected.subject}
                 onChange={(e) =>
                   setSelected({ ...selected, subject: e.target.value })
                 }
               >
-                <option defaultValue>-- Select --</option>
+                <option defaultValue>Select</option>
                 {subject &&
                   subject.map((subject) => {
                     return (
@@ -218,20 +219,20 @@ const Marks = () => {
               </label>
               <select
                 id="examType"
-                className="px-2 bg-blue-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
+                className="px-2 bg-green-50 py-3 rounded-sm text-base w-full accent-green-700 mt-1"
                 value={selected.examType}
                 onChange={(e) =>
                   setSelected({ ...selected, examType: e.target.value })
                 }
               >
-                <option defaultValue>-- Select --</option>
+                <option defaultValue>Select</option>
                 <option value="internal">Internal</option>
                 <option value="external">External</option>
               </select>
             </div>
           </div>
           <button
-            className="bg-blue-50 px-4 py-2 mt-8 mx-auto rounded border-2 border-blue-500 text-black"
+            className="bg-green-50 px-4 py-2 mt-8 mx-auto rounded border-2 border-green-500 text-black"
             onClick={loadStudentDetails}
           >
             Load Student Data
@@ -252,10 +253,10 @@ const Marks = () => {
               return (
                 <div
                   key={student.enrollmentNo}
-                  className="w-[30%] flex justify-between items-center border-2 border-blue-500 rounded"
+                  className="w-[30%] flex justify-between items-center border-2 border-green-500 rounded"
                   id={student.enrollmentNo}
                 >
-                  <p className="text-lg px-4 w-1/2 bg-blue-50">
+                  <p className="text-lg px-4 w-1/2 bg-green-50">
                     {student.enrollmentNo}
                   </p>
                   <input
@@ -269,7 +270,7 @@ const Marks = () => {
             })}
           </div>
           <button
-            className="bg-blue-500 px-6 py-3 mt-8 mx-auto rounded text-white"
+            className="bg-green-500 px-6 py-3 mt-8 mx-auto rounded text-white"
             onClick={submitMarksHandler}
           >
             Upload Student Marks

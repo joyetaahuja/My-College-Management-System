@@ -12,7 +12,7 @@ const Student = () => {
           <button
             className={`${
               selected === "add" && "border-b-2 "
-            }border-blue-500 px-4 py-2 text-black rounded-sm mr-6`}
+            }border-green-500 px-4 py-2 text-black rounded-sm mr-6`}
             onClick={() => setSelected("add")}
           >
             Add Student
@@ -20,7 +20,7 @@ const Student = () => {
           <button
             className={`${
               selected === "edit" && "border-b-2 "
-            }border-blue-500 px-4 py-2 text-black rounded-sm`}
+            }border-green-500 px-4 py-2 text-black rounded-sm`}
             onClick={() => setSelected("edit")}
           >
             Edit Student

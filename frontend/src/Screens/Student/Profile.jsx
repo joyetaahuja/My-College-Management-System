@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { setUserData } from "../../redux/actions";
 import { baseApiURL } from "../../baseUrl";
-import toast from "react-hot-toast";
+
 const Profile = () => {
   const [showPass, setShowPass] = useState(false);
   const router = useLocation();
@@ -14,6 +15,7 @@ const Profile = () => {
     new: "",
     current: "",
   });
+
   useEffect(() => {
     const headers = {
       "Content-Type": "application/json",
@@ -123,7 +125,7 @@ const Profile = () => {
             </div>
             <button
               className={`${
-                showPass ? "bg-red-100 text-red-600" : "bg-blue-600 text-white"
+                showPass ? "bg-blue-100 text-blue-600" : "bg-green-600 text-white"
               }  px-3 py-1 rounded mt-4`}
               onClick={() => setShowPass(!showPass)}
             >

@@ -5,10 +5,12 @@ import { IoMdLink } from "react-icons/io";
 import { HiOutlineCalendar, HiOutlineSearch } from "react-icons/hi";
 import toast from "react-hot-toast";
 import { baseApiURL } from "../../baseUrl";
+
 const Material = () => {
   const [subject, setSubject] = useState();
   const [selected, setSelected] = useState();
   const [material, setMaterial] = useState([]);
+
   useEffect(() => {
     toast.loading("Loading Subjects");
     axios
@@ -41,7 +43,7 @@ const Material = () => {
         if (response.data.success) {
           setMaterial(response.data.material);
         } else {
-          // Error
+          // Error handling if needed
         }
       })
       .catch((error) => {
@@ -50,7 +52,7 @@ const Material = () => {
   };
 
   const onSelectChangeHandler = (e) => {
-    setMaterial();
+    setMaterial([]);
     setSelected(e.target.value);
   };
 
@@ -64,10 +66,10 @@ const Material = () => {
             name="subject"
             id="subject"
             onChange={onSelectChangeHandler}
-            className="px-2 bg-blue-50 py-3 rounded-sm text-base accent-blue-700"
+            className="px-2 bg-green-50 py-3 rounded-sm text-base accent-green-700"
           >
             <option defaultValue value="select">
-              -- Select Subject --
+              Select Subject
             </option>
             {subject &&
               subject.map((item) => {
@@ -80,7 +82,7 @@ const Material = () => {
           </select>
           <button
             onClick={getSubjectMaterial}
-            className="bg-blue-500 text-white py-3 px-4 text-2xl rounded-sm"
+            className="bg-green-500 text-white py-3 px-4 text-2xl rounded-sm ml-4"
           >
             <HiOutlineSearch />
           </button>
@@ -91,7 +93,7 @@ const Material = () => {
               return (
                 <div
                   key={index}
-                  className="border-blue-500 border-2 w-full rounded-md shadow-sm py-4 px-6 relative mb-4"
+                  className="border-green-500 border-2 w-full rounded-md shadow-sm py-4 px-6 relative mb-4"
                 >
                   <p
                     className={`text-xl font-medium flex justify-start items-center ${
@@ -106,7 +108,7 @@ const Material = () => {
                   >
                     {item.title}{" "}
                     {item.link && (
-                      <span className="text-2xl group-hover:text-blue-500 ml-1">
+                      <span className="text-2xl group-hover:text-green-500 ml-1">
                         <IoMdLink />
                       </span>
                     )}

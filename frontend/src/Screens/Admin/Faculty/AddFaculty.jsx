@@ -86,7 +86,7 @@ const AddFaculty = () => {
               if (response.data.success) {
                 toast.success(response.data.message);
                 setFile();
-                setPreviewImage();
+                setPreviewImage("");
                 setData({
                   employeeId: "",
                   firstName: "",
@@ -123,7 +123,7 @@ const AddFaculty = () => {
       className="w-[70%] flex justify-center items-center flex-wrap gap-6 mx-auto mt-10"
     >
       <div className="w-[40%]">
-        <label htmlFor="firstname" className="leading-7 text-sm ">
+        <label htmlFor="firstname" className="leading-7 text-sm">
           Enter First Name
         </label>
         <input
@@ -131,11 +131,11 @@ const AddFaculty = () => {
           id="firstname"
           value={data.firstName}
           onChange={(e) => setData({ ...data, firstName: e.target.value })}
-          className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          className="w-full bg-green-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
       </div>
       <div className="w-[40%]">
-        <label htmlFor="middlename" className="leading-7 text-sm ">
+        <label htmlFor="middlename" className="leading-7 text-sm">
           Enter Middle Name
         </label>
         <input
@@ -143,11 +143,11 @@ const AddFaculty = () => {
           id="middlename"
           value={data.middleName}
           onChange={(e) => setData({ ...data, middleName: e.target.value })}
-          className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          className="w-full bg-green-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
       </div>
       <div className="w-[40%]">
-        <label htmlFor="lastname" className="leading-7 text-sm ">
+        <label htmlFor="lastname" className="leading-7 text-sm">
           Enter Last Name
         </label>
         <input
@@ -155,11 +155,11 @@ const AddFaculty = () => {
           id="lastname"
           value={data.lastName}
           onChange={(e) => setData({ ...data, lastName: e.target.value })}
-          className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          className="w-full bg-green-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
       </div>
       <div className="w-[40%]">
-        <label htmlFor="employeeId" className="leading-7 text-sm ">
+        <label htmlFor="employeeId" className="leading-7 text-sm">
           Enter Employee Id
         </label>
         <input
@@ -167,11 +167,11 @@ const AddFaculty = () => {
           id="employeeId"
           value={data.employeeId}
           onChange={(e) => setData({ ...data, employeeId: e.target.value })}
-          className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          className="w-full bg-green-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
       </div>
       <div className="w-[40%]">
-        <label htmlFor="email" className="leading-7 text-sm ">
+        <label htmlFor="email" className="leading-7 text-sm">
           Enter Email Address
         </label>
         <input
@@ -179,11 +179,11 @@ const AddFaculty = () => {
           id="email"
           value={data.email}
           onChange={(e) => setData({ ...data, email: e.target.value })}
-          className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          className="w-full bg-green-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
       </div>
       <div className="w-[40%]">
-        <label htmlFor="phoneNumber" className="leading-7 text-sm ">
+        <label htmlFor="phoneNumber" className="leading-7 text-sm">
           Enter Phone Number
         </label>
         <input
@@ -191,16 +191,16 @@ const AddFaculty = () => {
           id="phoneNumber"
           value={data.phoneNumber}
           onChange={(e) => setData({ ...data, phoneNumber: e.target.value })}
-          className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          className="w-full bg-green-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
       </div>
       <div className="w-[40%]">
-        <label htmlFor="branch" className="leading-7 text-sm ">
+        <label htmlFor="branch" className="leading-7 text-sm">
           Select Department
         </label>
         <select
           id="branch"
-          className="px-2 bg-blue-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
+          className="px-2 bg-green-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
           value={data.department}
           onChange={(e) => setData({ ...data, department: e.target.value })}
         >
@@ -215,7 +215,7 @@ const AddFaculty = () => {
         </select>
       </div>
       <div className="w-[40%]">
-        <label htmlFor="post" className="leading-7 text-sm ">
+        <label htmlFor="post" className="leading-7 text-sm">
           Enter POST
         </label>
         <input
@@ -223,17 +223,17 @@ const AddFaculty = () => {
           id="post"
           value={data.post}
           onChange={(e) => setData({ ...data, post: e.target.value })}
-          className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          className="w-full bg-green-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
       </div>
       <div className="w-[95%] flex justify-evenly items-center">
         <div className="w-[25%]">
-          <label htmlFor="gender" className="leading-7 text-sm ">
+          <label htmlFor="gender" className="leading-7 text-sm">
             Select Gender
           </label>
           <select
             id="gender"
-            className="px-2 bg-blue-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
+            className="px-2 bg-green-50 py-3 rounded-sm text-base w-full accent-blue-700 mt-1"
             value={data.gender}
             onChange={(e) => setData({ ...data, gender: e.target.value })}
           >
@@ -243,52 +243,54 @@ const AddFaculty = () => {
           </select>
         </div>
         <div className="w-[25%]">
-          <label htmlFor="experience" className="leading-7 text-sm ">
+          <label htmlFor="experience" className="leading-7 text-sm">
             Enter Experience
           </label>
           <input
             type="number"
             id="experience"
             value={data.experience}
-            onChange={(e) => setData({ ...data, experience: e.target.value })}
-            className="w-full bg-blue-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-          />
+            onChange={(e) => setData({ ...
+              data, experience: e.target.value })}
+              className="w-full bg-green-50 rounded border focus:border-dark-green focus:bg-secondary-light focus:ring-2 focus:ring-light-green text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div className="w-[25%]">
+            <label htmlFor="file" className="leading-7 text-sm">
+              Select Profile
+            </label>
+            <label
+              htmlFor="file"
+              className="px-2 bg-green-50 py-3 rounded-sm text-base w-full flex justify-center items-center cursor-pointer"
+            >
+              Upload
+              <span className="ml-2">
+                <FiUpload />
+              </span>
+            </label>
+            <input
+              hidden
+              type="file"
+              id="file"
+              accept="image/*"
+              onChange={handleFileChange}
+            />
+          </div>
         </div>
-        <div className="w-[25%]">
-          <label htmlFor="file" className="leading-7 text-sm ">
-            Select Profile
-          </label>
-          <label
-            htmlFor="file"
-            className="px-2 bg-blue-50 py-3 rounded-sm text-base w-full flex justify-center items-center cursor-pointer"
-          >
-            Upload
-            <span className="ml-2">
-              <FiUpload />
-            </span>
-          </label>
-          <input
-            hidden
-            type="file"
-            id="file"
-            accept="image/*"
-            onChange={handleFileChange}
-          />
-        </div>
-      </div>
-      {previewImage && (
-        <div className="w-full flex justify-center items-center">
-          <img src={previewImage} alt="student" className="h-36" />
-        </div>
-      )}
-      <button
-        type="submit"
-        className="bg-blue-500 px-6 py-3 rounded-sm my-6 text-white"
-      >
-        Add New Faculty
-      </button>
-    </form>
-  );
-};
-
-export default AddFaculty;
+        {previewImage && (
+          <div className="w-full flex justify-center items-center">
+            <img src={previewImage} alt="faculty" className="h-36" />
+          </div>
+        )}
+        <button
+          type="submit"
+          className="bg-green-500 px-6 py-3 rounded-sm my-6 text-white"
+        >
+          Add New Faculty
+        </button>
+      </form>
+    );
+  };
+  
+  export default AddFaculty;
+  
